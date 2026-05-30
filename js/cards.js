@@ -1,0 +1,98 @@
+window.cards = [
+  {
+    id: "Q1",
+    question: "A developer needs to replace a legacy JavaScript button that prepopulates fields on a new Record. Which Lightning-friendly feature should be used?",
+    options: [
+      { letter: "A", text: "Validation Rules" },
+      { letter: "B", text: "Quick Actions" },
+      { letter: "C", text: "Outbound Messaging" },
+      { letter: "D", text: "Apex Triggers" },
+    ],
+    answer: "B",
+    explanation: "Quick Actions are the standard replacement for JavaScript buttons to prepopulate data in Lightning.",
+  },
+  {
+    id: "Q2",
+    question: "A developer wants to create a unique identifier for Order records imported from an external system. Which field configuration should be used?",
+    options: [
+      { letter: "A", text: "Indirect Lookup" },
+      { letter: "B", text: "Text field marked as Unique and External ID" },
+      { letter: "C", text: "Auto-number field" },
+      { letter: "D", text: "Master-Detail relationship" },
+    ],
+    answer: "B",
+    explanation: "An External ID is required to match records with external systems, and Unique prevents duplicates.",
+  },
+  {
+    id: "Q3",
+    question: "Which two features can be used to send an outbound message without writing Apex code? (Choose 2)",
+    options: [
+      { letter: "A", text: "Flow Builder" },
+      { letter: "B", text: "Approval Process" },
+      { letter: "C", text: "Entitlement Process" },
+      { letter: "D", text: "Lightning Web Components" },
+    ],
+    answer: "A, B",
+    explanation: "Flow Builder and Approval Processes support declarative outbound messaging.",
+  },
+  {
+    id: "Q4",
+    question: "A developer is writing a trigger on the Contact object. Which two practices ensure the code is scalable and maintainable? (Choose 2)",
+    options: [
+      { letter: "A", text: "Place all business logic directly in the trigger file." },
+      { letter: "B", text: "Use a single trigger per object." },
+      { letter: "C", text: "Move logic into an Apex handler class." },
+      { letter: "D", text: "Use Trigger.new only in \"Before\" contexts." },
+    ],
+    answer: "B, C",
+    explanation: "One trigger per object and using Handler Classes is a core Salesforce best practice.",
+  },
+  {
+    id: "Q5",
+    question: "What is the correct method signature for an Invocable Action that accepts a list of IDs and returns a list of strings?",
+    options: [
+      { letter: "A", text: "@InvocableMethod public static List<String> myMethod(List<Id> ids) {}" },
+      { letter: "B", text: "@InvocableMethod public List<String> myMethod(Id ids) {}" },
+      { letter: "C", text: "@InvocableMethod global String myMethod(List<Id> ids) {}" },
+      { letter: "D", text: "@InvocableMethod public static Map<Id, String> myMethod(List<Id> ids) {}" },
+    ],
+    answer: "A",
+    explanation: "Invocable methods must be static and must accept/return Lists (or specific wrappers) for bulkification.",
+  },
+  {
+    id: "Q6",
+    question: "A developer needs to perform a DML operation but wants to allow successful records to be saved even if others fail. Which statement should be used?",
+    options: [
+      { letter: "A", text: "insert records;" },
+      { letter: "B", text: "Database.insert(records, false);" },
+      { letter: "C", text: "Database.insert(records, true);" },
+      { letter: "D", text: "upsert records;" },
+    ],
+    answer: "B",
+    explanation: "The second parameter false in Database.insert is the allOrNone flag. Setting it to false allows partial success.",
+  },
+  {
+    id: "Q7",
+    question: "Which tab in the Developer Console Log Inspector should a developer use to view the execution time of various processes in a transaction?",
+    options: [
+      { letter: "A", text: "Stack Tree" },
+      { letter: "B", text: "Execution Log" },
+      { letter: "C", text: "Timeline" },
+      { letter: "D", text: "Performance Tree" },
+    ],
+    answer: "C",
+    explanation: "The Timeline tab provides a visual breakdown of where time was spent (Apex, DB, Workflow, etc.).",
+  },
+  {
+    id: "Q8",
+    question: "What is a characteristic of a \"Master-Detail\" relationship compared to a \"Lookup\" relationship?",
+    options: [
+      { letter: "A", text: "The child record can exist without a parent." },
+      { letter: "B", text: "The security/access of the child is determined by the parent." },
+      { letter: "C", text: "You can have up to 40 Master-Detail fields per object." },
+      { letter: "D", text: "Deleting the parent does not delete the child." },
+    ],
+    answer: "B",
+    explanation: "In Master-Detail, the child inherits the sharing and security settings of the master record.",
+  },
+];
