@@ -36,9 +36,8 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1.25rem 3rem;
 }
 
 header {
@@ -331,7 +330,6 @@ kbd {
 }
 
 @media (max-width: 480px) {
-  .container { padding: 1.25rem 1rem 2rem; }
   .card-front, .card-back { padding: 1.35rem; }
   .question-text { font-size: 1rem; }
   .nav-btn { padding: 0.55rem 0.85rem; font-size: 0.85rem; }
